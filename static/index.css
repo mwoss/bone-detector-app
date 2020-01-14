@@ -1,0 +1,114 @@
+/*!
+ * Start Bootstrap - Grayscale v5.0.9 (https://startbootstrap.com/template-overviews/grayscale)
+ * Copyright 2013-2019 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-grayscale/blob/master/LICENSE)
+ */
+
+.masthead {
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 35rem;
+    padding: 15rem 0;
+    /*background: radial-gradient(to bottom, rgba(22, 22, 22, 0.3) 0%, rgba(22, 22, 22, 0.7) 75%, #161616 100%) no-repeat scroll center;*/
+    background: radial-gradient(ellipse at left bottom, #8bf1e2, transparent), radial-gradient(ellipse at right top, #54a79a, transparent) no-repeat scroll center;
+    background-size: cover;
+}
+
+.masthead h1 {
+    font-family: 'Varela Round', serif;
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    letter-spacing: 0.8rem;
+    background: -webkit-linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.masthead h2 {
+    max-width: 20rem;
+    font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+    .masthead h1 {
+        font-size: 4rem;
+        line-height: 4rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .masthead {
+        height: 100vh;
+        padding: 0;
+    }
+
+    .masthead h1 {
+        font-size: 6.5rem;
+        line-height: 6.5rem;
+        letter-spacing: 0.8rem;
+    }
+
+    .masthead h2 {
+        max-width: 30rem;
+        font-size: 1.25rem;
+    }
+}
+
+.btn {
+    box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
+    padding: 1.25rem 2rem;
+    font-family: 'Varela Round', serif;
+    font-size: 80%;
+    text-transform: uppercase;
+    letter-spacing: .15rem;
+    border: 0;
+}
+
+.btn-primary {
+    background-color: #64a19d;
+}
+
+.btn-primary:hover {
+    background-color: #4f837f;
+}
+
+.btn-primary:focus {
+    background-color: #4f837f;
+    color: white;
+}
+
+.btn-primary:active {
+    background-color: #467370 !important;
+}
+
+body {
+    font-family: 'Nunito', serif;
+    letter-spacing: 0.0625em;
+    box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.5);
+}
+
+a {
+    color: #64a19d;
+}
+
+a:focus, a:hover {
+    text-decoration: none;
+    color: #3c6360;
+}
+
+.bg-black {
+    background-color: #161616 !important;
+}
+
+.bg-primary {
+    background-color: #64a19d !important;
+}
+
+.text-primary {
+    color: #64a19d !important;
+}
+
+footer {
+    padding: 5rem 0;
+}
