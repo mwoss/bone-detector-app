@@ -24,7 +24,7 @@ def zipped(*args) -> str:
     zip_name = path.join(app.config["UPLOAD_FOLDER"], "prediction_result.zip")
     with ZipFile(zip_name, "w", ZIP_DEFLATED) as zip_file:
         for file_path in args:
-            zip_file.write(file_path, file_path.rsplit(""))
+            zip_file.write(file_path)
 
     return zip_name
 
@@ -49,7 +49,7 @@ def index():
             return send_file(
                 zipped_output,
                 mimetype="zip",
-                attachment_filename=zipped_output,
+                attachment_filename="prediction_result.zip",
                 as_attachment=True
             )
 

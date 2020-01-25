@@ -19,14 +19,22 @@
         <div class="mx-auto text-center">
             <h1 class="mx-auto my-0 text-uppercase">Bone </h1>
             <h2 class="text-white-50 mx-auto mt-2 mb-5">
-                Ultra simple application for automatic detection of bone morphology openings
+                Ultra simple application for automatic detection of bone morphology openings. <br/>
+                Upload your x-ray bone scan and we try to detect opening.
             </h2>
-            <form method=post enctype=multipart/form-data>
-                <input type=file name=file>
-                <input type=submit value=Upload>
+            <form method=post enctype=multipart/form-data class="imageForm">
+                <div class="buttonBlock">
+                    <label for="imageInput" class="btn btn-primary">Choose file</label>
+                    <input id="imageInput" type=file name=file>
+                    <input type=submit value=Upload class="btn btn-primary">
+                </div>
+                <img id="imagePreview"/>
             </form>
         </div>
     </div>
 </header>
 </body>
+<footer>
+    <script src="../static/index.js"></script>
+</footer>
 </html>
