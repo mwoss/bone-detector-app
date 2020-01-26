@@ -2,7 +2,7 @@
 Bone can detect openings from x-ray bone scan are return as a result two images: morphology openings and opening applied on uploaded x-ray scan.
            
 #### How to run applicaiton
-Before starting application download pre-trained bk models from personal website of Kwolek Bogdan and set BK_MODEL_PATH, BK_MODEL_WEIGHTS_PATH environment variables.  
+Before starting application download pre-trained bk models from personal website of professor Bogdan Kwolek and set BK_MODEL_PATH, BK_MODEL_WEIGHTS_PATH environment variables.  
 
 Then, create virtual env using your favourite tool (pyenv, virtualenv, etc.) or just use base interpreter, then type:
 
