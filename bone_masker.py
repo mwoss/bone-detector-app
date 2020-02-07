@@ -19,7 +19,7 @@ class BoneOpeningModel:
     IMAGE_SHAPE = (512, 256)
 
     def __init__(self):
-        with open(BK_MODEL_PATH, 'r') as raw_model:
+        with open(BK_MODEL_PATH, "r") as raw_model:
             loaded_model = model_from_json(raw_model.read())
 
         loaded_model.load_weights(BK_MODEL_WEIGHTS_PATH)  # load weights into new model
@@ -33,7 +33,8 @@ class BoneOpeningModel:
         :param image_path: Path to image used for prediction
         :return: Paths to predicted bone morphology opening and masked image (input image + prediction)
         """
-        image = io.imread(image_path)
+        image = io.imread(image_path, as_gray=True)
+        image = transform.resize(image, self.IMAGE_SHAPE, mode="constant")  # model expects image of size IMAGE_SHAPE
         transformed_image = self._transform_image(image)
 
         with graph.as_default():
@@ -84,7 +85,7 @@ class BoneOpeningModel:
         :param image: Input image
         :return: Image after all transformation
         """
-        tr_image = transform.resize(image, self.IMAGE_SHAPE, mode='constant')
+        tr_image = transform.resize(image, self.IMAGE_SHAPE, mode="constant")
         tr_image = np.expand_dims(tr_image, -1)
         tr_image = tr_image[None, ...]
 
